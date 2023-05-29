@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Carsante</title>
+		<!-- llamar las librerias de bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	</head>
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+		<div class="container-fluid opciones_desplegar_barra mover_cerrar d-block d-md-none solido">
+			<div class="cuadro">
+			<div class="row solido">
+				<button class="boton_cerrar col-2">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list boton-accion btn btn-success boton_oprimido" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				</svg>
+				</button>
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				<div>
+
+
+			</div>
+
+			<div class="row solido">
+				&nbsp;
+				&nbsp;
+				<a href="#contactenos" class="texto_barra">Cont&aacutectenos</a>
+				&nbsp;
+				&nbsp;
+
+			</div>
+			<div class="row solido">
+				<a href="#caracteristicas" class="texto_barra">Caracter&iacutesticas</a>
+				&nbsp;
+				&nbsp;
+			</div>
+			<div class="row solido">
+				<a href="#producto" class="texto_barra">Producto</a>
+				&nbsp;
+				&nbsp;
+			</div>
+			<div class="row solido">
+				<a href="login.html" class="texto_barra">
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right icono_login" viewBox="0 0 16 16">
+  					<path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+  					<path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>	
+  					</svg>
+					Login
+			</div>
+			</div>
+		</div>
+		</div>
+		<nav class="navbar navbar-expand col-12 barra solido ">
+			
+			<div class="col-2 col-md-1 solido green">
+			<a href="">
+				<img src="./images/logo_esquina.png" class="logo_esquina" href="">
+			</a>
+			</div>
+			
+	
+				
+			<div class="col-8 col-md-4 solido blue" style="text-align: center;">
+				<h1 id="titulo_barra">&nbsp;&nbsp;Car Sant&eacute</h1>
+			</div>
+
+	
+
+			<div class="col-md-2 col-lg-2 d-none d-md-block solido " style="text-align: right;">
+					<a href="#contactenos" class="texto_barra">Cont&aacutectenos</a>
+			</div>
+
+			<div class="col-md-2 col-lg-2 d-none d-md-block solido" style="text-align: right;">
+					<a href="#caracteristicas" class="texto_barra">Caracter&iacutesticas</a> 
+				</div>
+			<div class="col-md-2 col-lg-2 d-none d-md-block solido" style="text-align: center;">
+					<a href="#producto" class="texto_barra">Producto</a> 
+				</div>
+
+			<div class="col-md-1 col-lg-1 d-none d-md-block solido">
+					
+
+					<a href="login.html" class="texto_barra">
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right icono_login" viewBox="0 0 16 16">
+  					<path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+  					<path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>	
+  					</svg>
+					Login 
+				</a>
+				</div>
+			<div class="col-2 d-block d-md-none solido">
+					<button class="btn_barra">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list boton-accion btn btn-success" viewBox="0 0 16 16">
+  					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					</svg>
+					</span>
+				</div>
+		</nav>
+		
+		<div class="container animacion solido">
+			<div class="row solido green" style="padding-top: 120px">
+
+				<div class ="container-fluid solido red imagen_desplazamiento imagen_fondo1">
+					<div class="row">
+						<div class="col-1  solido"  style="text-align: right; height: 295px;">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left arrow" id="left_arrow" viewBox="0 0 16 16">
+  							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+								</svg>
+						</div>
+						<div class="col-10 solido point_bar_down green">
+							<span id="point1_bar" class="point_now">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  								<circle cx="8" cy="8" r="8"/>
+								</svg>
+							</span>
+							&nbsp;
+							<span id="point2_bar">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  								<circle cx="8" cy="8" r="8"/>
+								</svg>
+							</span>
+							&nbsp;
+							<span id="point3_bar">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  								<circle cx="8" cy="8" r="8"/>
+								</svg>
+							</span>
+							&nbsp;
+							<span id="point4_bar">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  								<circle cx="8" cy="8" r="8"/>
+								</svg>
+							</span>
+						</div>
+						<div class="col-1 solido" style="text-align: right;">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right arrow" id="right_arrow" viewBox="0 0 16 16">
+  							<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-12 col-md-6" style="text-align: justify;">
+					<h1 style="text-align: center;"> Que &eacutes Car Sant&eacute</h1>
+					<br>
+					Car Sant&eacute es una soluci&oacuten IoT con el prop&oacutesito del cuidado y prevenci&oacuten de los autom&oacuteviles, con sus avanzados sensores y potente procesador es capaz de generar alertas sobre las acciones a tomar con su veh&iacuteculo.
+					El sistema cuenta con tecnolog&iacutea avanzada de an&aacutelisis del trayecto que adem&aacutes de generar alertas sobre el mantenimiento del carro permite notificar el trayecto con la menor cantidad de daños en la v&iacutea y cuidar su veh&iacuteculo.
+					</span>
+				</div>
+				<div class="col-12 col-md-6">
+					<img src="./images/imagen_barra7.png" class="imagen_contenido1" >
+				</div>
+			</div>
+			<br id="caracteristicas">
+			<hr>
+			<div class="row">
+				<div class="col-12" style="text-align: center;">
+					<br>
+					<h1>¿Porque elegirnos?</h1>
+					<br>
+					<br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-4 solido blue">
+					<div class="row">
+						<div class="col-12" style="text-align: center;">
+						<svg  style="background-color: rgb(157,237,246)" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-map simbolo_caracteristicas" viewBox="0 0 16 16">
+  						<path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+						</svg>
+						<br>
+						<br>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 texto_caracteristicas">
+						<h3 style="text-align: center;"> Tecnolog&iacutea Inovadora</h3>
+						Tecnolog&iacutea innovadora de detecci&oacuten de los trayectos malos y implementaci&oacuten de un sistema integrado.
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4 solido red">
+					<div class="row">
+						
+						<div class="col-12" style="text-align: center;">
+						<svg style="background-color: rgb(191,195,56)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front simbolo_caracteristicas" viewBox="0 0 16 16">
+  						<path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"/>
+  						<path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"/>
+						</svg>
+						<br>
+						<br>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 texto_caracteristicas">
+							<h3 style="text-align: center;">No invasivo</h3>
+							Sistema no invasivo, a diferencia de otras soluciones este dispositivo solamente se debe instalar 
+							peg&aacutendolo a una parte del coche y conect&aacutendolo por USB, no es necesario ninguna mofidicaci&oacuten del veh&iacuteculo.
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-4 solido green">
+					<div class="row">
+						<div class="col-12" style="text-align: center;">
+						<svg style="background-color: rgb(44,37,31)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe simbolo_caracteristicas" viewBox="0 0 16 16">
+  						<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+						</svg>
+						<br>
+						<br>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 texto_caracteristicas"  id="contactenos">
+						<h3 style="text-align: center;">Accesible</h3>
+						C&oacutemodo y f&iacutecil de usar para todos los tipos de usuarios.
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="d-block d-md-none col-12 solido red" style="text-align: justify;">
+					<h2 style="text-align: center;">quienes somos</h2>
+							<span>
+								Somos estudiantes de ingenier&iacutea electr&oacutenica que percibimos el problema del cuidado del carro y quiere tomar acciones, con nuestra experiencia y perseverancia buscamos mejorar la vida de las personas que no tienen los conocimientos necesarios para cuidar su veh&iacuteculo.
+							</span>
+							<h5> Telef&oacuteno: 55-5555-555 </h5>
+				</div>
+				<div class="col-12 col-md-6 solido green">
+					<img src="./images/quienessomos.png" class="imagen_contenido2">
+				</div>
+				<div class="d-none d-md-block col-12 col-md-6 solido blue" style="text-align: justify;">
+					<h2 style="text-align: center;">quienes somos</h2>
+					<br>
+							<span>
+								Somos estudiantes de ingenier&iacutea electr&oacutenica que percibimos el problema del cuidado del carro y quiere tomar acciones, con nuestra experiencia y perseverancia buscamos mejorar la vida de las personas que no tienen los conocimientos necesarios para cuidar su veh&iacuteculo.
+							</span>
+							<br>
+							<br>
+							<h5> Telef&oacuteno: 55-5555-555 </h5>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<div class="row solido red galeria" id="producto">
+						<div class="col-3 d-none d-lg-block">
+							<h2 style="text-align: center;">producto</h2>
+							<span>
+								Car sant&eacute es un producto aproximadamente del tama&ntildeo de una mano, en esta caja se encuentran componentes de alta tecnolog&iacutea que permite tomar el movimiento y la posici&oacuten del carro para tener un registro del uso y sus momentos de mantenimiento.
+							</span>
+
+							<img src="./images/imagen_barra1.png">
+							<br>
+							<br>
+						</div>
+						<div class="col-3 d-none d-lg-block"> 
+							<h2 style="text-align: center;">visión</h2>
+							<span>
+								Como empresa, nuestra visi&oacuten es desarrollar un dispositivo IoT de alta calidad que permita a los propietarios de veh&iacuteculos cuidar y monitorear sus carros de manera más eficiente. Creemos que nuestro dispositivo de IoT debe ser f&aacutecil de usar, confiable y proporcionar una experiencia de usuario excepcional.
+							</span>
+							<img src="./images/imagen_barra2.png">
+							<br>
+							<br>
+						</div>
+						<div class="col-3 d-none d-lg-block"> 
+							<h2 style="text-align: center;">misión</h2>
+							<span>
+								La misi&oacuten de nuestra empresa es dise&ntildear y fabricar un dispositivo de IoT para el cuidado del carro que brinde a los propietarios de veh&iacuteculos la capacidad de monitorear y cuidar sus carros de manera m&aacutes efectiva. Nos esforzamos por crear un dispositivo de IoT f&acutecil de usar y confiable que permita a los propietarios de veh&iacuteculos mantener sus carros en &oacuteptimas condiciones y prolongar su vida &uacutetil.
+							</span>
+							<img src="./images/imagen_barra3.png">
+							<br>
+							<br>
+						</div>
+						<div class="col-3 d-none d-lg-block">
+							<h2 style="text-align: center;">Avance</h2>
+							<span>
+								Car sant&eacute cuenta con un sofisticado sistema de adquisici&oacuten de la carretera, con sus sensores es capaz   de detectar defectos en la v&iacutea y registrarlos para evitarlos en circulaciones posteriores.
+							</span>
+							<img src="./images/imagen_barra4.png">
+							<br>
+							<br>
+						</div>
+
+			</div>
+			<div class="row solido red galeria" id="producto">
+				<div class="col-6 d-block d-lg-none" style="height: 770px;">
+							<h2 style="text-align: center;">producto</h2>
+							<span>
+								Car sant&eacute es un producto aproximadamente del tama&ntildeo de una mano, en esta caja se encuentran componentes de alta tecnolog&iacutea que permite tomar el movimiento y la posici&oacuten del carro para tener un registro del uso y sus momentos de mantenimiento.
+							</span>
+
+							<img src="./images/imagen_barra1.png">
+							<br>
+							<br>
+						</div>
+						<div class="col-6 d-block d-lg-none" style="height: 770px;"> 
+							<h2 style="text-align: center;">visión</h2>
+							<span>
+								Como empresa, nuestra visi&oacuten es desarrollar un dispositivo IoT de alta calidad que permita a los propietarios de veh&iacuteculos cuidar y monitorear sus carros de manera más eficiente. Creemos que nuestro dispositivo de IoT debe ser f&aacutecil de usar, confiable y proporcionar una experiencia de usuario excepcional.
+							</span>
+							<img src="./images/imagen_barra2.png">
+							<br>
+							<br>
+						</div>
+			</div>
+			<div class="row solido red galeria">
+				<div class="col-6 d-block d-lg-none" style="height: 900px;"> 
+							<h2 style="text-align: center;">misión</h2>
+							<span>
+								La misi&oacuten de nuestra empresa es dise&ntildear y fabricar un dispositivo de IoT para el cuidado del carro que brinde a los propietarios de veh&iacuteculos la capacidad de monitorear y cuidar sus carros de manera m&aacutes efectiva. Nos esforzamos por crear un dispositivo de IoT f&acutecil de usar y confiable que permita a los propietarios de veh&iacuteculos mantener sus carros en &oacuteptimas condiciones y prolongar su vida &uacutetil.
+							</span>
+							<img src="./images/imagen_barra3.png">
+							<br>
+							<br>
+						</div>
+						<div class="col-6 d-block d-lg-none" style="height: 900px;">
+							<h2 style="text-align: center;">Avance</h2>
+							<span>
+								Car sant&eacute cuenta con un sofisticado sistema de adquisici&oacuten de la carretera, con sus sensores es capaz   de detectar defectos en la v&iacutea y registrarlos para evitarlos en circulaciones posteriores.
+							</span>
+							<img src="./images/imagen_barra4.png">
+							<br>
+							<br>
+						</div>
+			</div>
+			
+		</div>
+		<hr>
+		<footer>
+			<span>
+				2023 - Car Sant&eacute | privacidad | Terminos y condiciones
+			</span>
+
+		</footer>
+
+
+
+		<script type="text/javascript" src="./JS/jquery_library.js" ></script>
+		<script type="text/javascript" src="./JS/main.js" ></script>
+		<script type="text/javascript" src="JS/enviar_datos.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="	anonymous"></script>
+	</body>
+</html>

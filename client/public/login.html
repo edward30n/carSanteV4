@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+	<title>Login</title>
+		<!-- llamar las librerias de bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="CSS/style_login.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		
+	</head>
+<body>	
+		<div class="container">
+			<div class="row">
+				<div class="col-0 col-lg-3">
+				</div>
+				<div class="col-12 col-lg-6 solido red login_square">
+					<div class="row">
+						<div class="col-12 login_title">
+							<h1>Car Sant&eacute</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<img src="images/logo.png" id="logo_login">	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<form id="Formulario_login">
+								<br>
+								<h2 id="titulo_login">Login</h2>
+								<label for="exampleFormControlInput1" class="form-label">
+								Usuario o Correo Electronico
+								</label>
+  								<input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese su usuario" required>
+  								<br>
+  								<label for="exampleFormControlInput1" class="form-label">
+								Contraseña
+								</label>
+								<input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese la contraseña" required autocomplete="current-password">
+  								<br>
+  								<button name="boton_enviar" type="submit" class="btn btn-success" id="btn_ingresar" style="position: relative; left: 20%;">Ingresar</button>
+  								<a href="register.html" id="link_start_account">¿No tienes cuenta?</a>
+							</form>
+							<br>
+						</div>
+					</div>
+				</div>
+				<div class="col-0 col-lg-3">
+					
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<hr>
+		<footer>
+			<span>
+				2023 - Car Sant&eacute | privacidad | Terminos y condiciones
+			</span>
+		</footer>
+
+
+		<script type="text/javascript" src="JS/formulario_login.js"></script>
+		<script type="text/javascript" src="JS/jquery_library.js"></script>
+		<script type="text/javascript" src="JS/main.js" ></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+	</body>
+</html>
+

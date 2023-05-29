@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inicio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="CSS/style_main.css">
+	<link rel="stylesheet" href="CSS/leaflet.css">
+	<link rel="stylesheet" type="text/css" href="CSS/speed.css">
+	<link rel="stylesheet" type="text/css" href="CSS/3_bar.css">
+	<meta charset="utf-8">
+    <script src="JS/leaflet.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+	<header class="contanier-fluid solido red" id="barra_superior">
+		<div class="row" style="z-index: 3;">
+			<div class="col-3 col-sm-4 col-md-6 col-lg-8 solido blue">
+				<div class="row">
+					<div class="col-12 col-md-3 solido">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list simbolo_opciones d-block" id="simbolo_opciones" viewBox="0 0 16 16">
+  					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list simbolo_opciones_oprimido d-none" id="simbolo_opciones_oprimido" viewBox="0 0 16 16">
+  					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					</svg>
+					</div>
+					<div class="d-none d-md-block col-9 solido">
+						<span class="titulo_barra">car sant&eacute - inicio</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-9 col-sm-8 col-md-6 col-lg-4 solido green">
+				<div class="row">
+					<div class="col-3 solido">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill simbolos d-block" id="notificacion_campana" viewBox="0 0 16 16">
+  						<path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill simbolos d-none" id="notificacion_campana_expandido" viewBox="0 0 16 16">
+							<path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+						  </svg>
+						<div class="cant_notificaciones" id="cantidad_notificaciones"></div>
+					</div>
+					<div class="col-7 solido">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle simbolo_usuario" viewBox="0 0 16 16">
+  						<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  						<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+						</svg>
+						<span class="nombre_texto" id="nombre_bar"></span>
+					</div>
+					<div class="col-2 solido" id="opciones_barra">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical d-block simbolos" id="boton_menu_contraido" viewBox="0 0 16 16">
+  						<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical d-none simbolos" id="boton_menu_expandido" viewBox="0 0 16 16">
+  						<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row barra_superior_desplegable solido" id="barra_desplegable">
+			<hr>
+			<div class="col-3 seleccion" id="info_mapa">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map-fill simbolo_usuario" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.502.502 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5V.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.498.498 0 0 0-.196 0L5 14.09zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1-.5-.1z"/>
+				</svg>
+				<span class="texto_barra">informaci&oacuten del mapa</span>
+			</div>
+			<div class="col-3 seleccion" id="info_carro">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill simbolo_usuario" viewBox="0 0 16 16">
+  				<path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+				</svg>
+				<span class="texto_barra">informaci&oacuten del carro</span>
+			</div>
+			<div class="col-3 seleccion" id="ajust_carro">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools simbolo_usuario" viewBox="0 0 16 16">
+  				<path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
+				</svg>
+				<span class="texto_barra">configuraci&oacuten del carro</span>
+			</div>
+		
+		</div>
+	</header>
+	<div class="menu_opciones container-fluid d-none">
+		<div class="row">
+			<div class="col-12">
+				<a href="">perf&iacutel</a>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<a href="configuration.html">configuraci&oacuten</a>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<a href="index.html">Salir</a>
+			</div>
+		</div>
+	</div>
+	<div class="notificaciones container-fluid d-none" id="cuadro_notificaciones">
+		<div class="row">
+			<div class="col-12">
+				<span>toca cambiar el Aceite</span>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<span>toca cambiar los neumaticos</span>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<span>toca cambiar la teconmecanica</span>
+				<hr>
+			</div>
+		</div>
+		
+	</div>
+	<div class="container-fluid solido d-block" id="container-mapa">
+		<div class="row">
+			<div class="col-12 solido blue">
+				<div class="col-12">
+					<h1> Dashboard Mapa</h1>
+					<hr>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-6 solido informacion_mapa">
+						<h2>Informaci&oacuten General del Mapa</h2>
+						<br>
+						<hr>
+						<div><b>kilometraje total:</b> <span id="kilometraje_total"></span> kilometros</div>
+						<br>
+						<hr>
+						<div><b>Cantidad de huecos:</b> <span id="huecos_totales"></span> huecos</div>
+						<br>
+						<hr>
+					</div>
+					<div class="col-12 col-md-6 solido  mapa">
+
+						<div class="row" style="height: 90%;">
+							<div id="mapid" class="col-12"></div>
+						</div>
+						<div class="row" style="height: 10%;">
+							<button class="col-12" id="volver_posicion">
+								volver a la posición de origen
+							</button>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid d-none" id="container-carro">
+		<div class="row">
+			<h1> Información Vehiculo</h1>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-6 informacion_mapa">
+				<h2> Cambio de Aceite por kilometros</h2>
+				 <div id="container-speed" class="chart-container"></div>
+    
+			</div>
+			<div class="col-12 col-md-6 informacion_mapa">
+				<h2> Cambio de Neumaticos por kilometros</h2>
+				<div id="container-rpm" class="chart-container"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-6 informacion_mapa">
+				<div id="container-3-barras"></div>
+			</div>
+			<div class="col-12 col-md-6 informacion_mapa">
+				<h2>Informaci&oacuten General del Vehiculo</h2>
+						<br>
+						<hr>
+						<div><b>kilometros que faltan para el cambio de Aceite:</b> <span id="kilometros_aceite"></span> kilometros</div>
+						<hr>
+						<div><b>kilometros que faltan para el cambio de Aceite:</b> <span id="kilometros_neumaticos"></span> kilometros</div>
+						<hr>
+						<div><b>Dias que faltan para el cambio de Aceite:</b> <span id="fechas_aceite"></span> dias</div>
+						<hr>
+						<div><b>Dias que faltan para la tecnomecanica:</b> <span id="fechas_tecnomecanica"></span> dias</div>
+						<hr>
+						<div><b>Dias que faltan para el cambio de Neumaticos:</b> <span id="fechas_neumaticos"></span> dias</div>
+						<hr>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid d-none" id="container-actualizar">
+		<div class="row">
+			<br>
+			<h1> Actualizar Kilometros y Fechas de Aceite, Neumaticos y Tecnomecanica</h1>
+		</div>
+		<div class="row">
+			<div class="col-1"></div>
+			<button class="col-2 botones_actualizar" id="update_aceite"type="submit">
+			Actualizar Aceite
+			</button>
+			<div class="col-1"></div>
+			<button class="col-3 botones_actualizar" id="update_tecnomecanica">
+			Actualizar Tecnomecanica
+			</button>
+			<div class="col-1"></div>
+			<button class="col-3 botones_actualizar" id="update_neumaticos">
+			Actualizar Neumaticos
+			</button>
+			<div class="col-1"></div>
+		</div>
+	</div>
+	<footer class="solido green" id="footer">
+
+		2023 - Car Sant&eacute | privacidad | Terminos y condiciones
+		
+	</footer>
+
+
+	
+	<script type="text/javascript" src="JS/jquery_library.js" ></script>
+	<script type="text/javascript" src="JS/formulario_aceite.js" ></script>
+	<script type="text/javascript" src="JS/main_inicio.js" ></script>
+	<script type="text/javascript" src="JS/bar_speed.js"></script>
+	<script type="text/javascript" src="JS/bar_3_circle.js"></script>
+	<script type="text/javascript" src="JS/enviar_datos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="	anonymous"></script>
+</body>
+</html>
